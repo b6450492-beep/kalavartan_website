@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Kalvataran Academy</title>
+
+    <!-- Fonts/icons are loaded online; no local CSS or JS file is required. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalavartan Academy - Footer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><!DOCTYPE html>
+
+
+
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #1b1236;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   COMMON FULL-SCREEN SECTIONS
+   ========================================================= */
+
+.gallery-page,
+.about-page,
+.courses-page {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #fff;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 9997;
+
+    display: none;
+}
+
+.gallery-page.active,
+.about-page.active,
+.courses-page.active {
+    display: block;
+}
+
+
+
+/* =========================================================
+   COURSES PAGE
+   ========================================================= */
+
+.courses-page {
+    padding: 0 7% 70px;
+}
+
+/* Keep the header exactly at the top like index.html.
+   The course content starts below it, so nothing overlaps the header. */
+.courses-page > header {
+    width: calc(100% + 14%);
+    margin-left: -7%;
+    margin-top: 0;
+}
+
+.courses-page > .courses-header {
+    padding-top: 55px;
+}
+
+.courses-header {
+    max-width: 800px;
+    margin: 10px auto 75px;
+    text-align: center;
+}
+
+.courses-label {
+    color: #f653a5;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.courses-header h1 {
+    color: #3b246b;
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.courses-header h1 span {
+    color: #f653a5;
+}
+
+.courses-title-line {
+    width: 75px;
+    height: 4px;
+    background: #ffd34e;
+    margin: 18px auto 22px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.courses-title-line::before,
+.courses-title-line::after {
+    position: absolute;
+    color: #f653a5;
+    font-size: 19px;
+    top: -11px;
+}
+
+.courses-title-line::before {
+    content: "♪";
+    left: -27px;
+}
+
+.courses-title-line::after {
+    content: "♫";
+    right: -29px;
+}
+
+.courses-intro {
+    max-width: 650px;
+    margin: auto;
+
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   COURSE ROW
+   ========================================================= */
+
+.course-row {
+    max-width: 1150px;
+
+    margin: 0 auto 90px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/*
+    NORMAL:
+    IMAGE LEFT
+    INFORMATION RIGHT
+*/
+
+.course-row .course-image {
+    grid-column: 1;
+}
+
+.course-row .course-info {
+    grid-column: 2;
+}
+
+
+/*
+    REVERSE:
+    INFORMATION LEFT
+    IMAGE RIGHT
+*/
+
+.course-row.reverse .course-image {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.course-row.reverse .course-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* =========================================================
+   COURSE IMAGE
+   ========================================================= */
+
+.course-image {
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+    border-radius: 25px;
+
+    box-shadow: 0 12px 30px rgba(91,45,144,.15);
+
+    background: #f5f1fa;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+.course-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   COURSE INFORMATION
+   ========================================================= */
+
+.course-info {
+    padding: 15px 0;
+}
+
+.course-number {
+    color: #ffd34e;
+    background: #5b2d90;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.course-info h2 {
+    color: #3b246b;
+    font-size: 35px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.course-line {
+    width: 55px;
+    height: 4px;
+    background: #f653a5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   LEARN MORE BUTTON
+   ========================================================= */
+
+.learn-more-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+
+    background: #f653a5;
+    color: #fff;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.learn-more-btn:hover {
+    background: #5b2d90;
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   COURSE DESCRIPTION
+   ========================================================= */
+
+.course-description {
+    display: none;
+
+    margin-top: 22px;
+
+    animation: descriptionOpen .4s ease;
+}
+
+.course-description.show {
+    display: block;
+}
+
+.course-description ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.course-description li {
+    color: #555;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+}
+
+.course-description li::marker {
+    color: #f653a5;
+    font-size: 14px;
+}
+
+
+/* SHOW LESS */
+
+.show-less-btn {
+    border: none;
+    background: transparent;
+
+    color: #f653a5;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px 0;
+    margin-top: 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+}
+
+.show-less-btn:hover {
+    color: #5b2d90;
+}
+
+@keyframes descriptionOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   COURSES END
+   ========================================================= */
+
+.courses-end {
+    max-width: 900px;
+
+    margin: 20px auto 30px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background: #5b2d90;
+    color: white;
+}
+
+.courses-end h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.courses-end h2 span {
+    color: #ffd34e;
+}
+
+.courses-end p {
+    color: rgba(255,255,255,.85);
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .course-row {
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+
+    .course-image {
+        height: 300px;
+    }
+
+    .course-info h2 {
+        font-size: 30px;
+    }
+}
+
+
+  * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* ================= FOOTER ================= */
+
+        .site-footer {
+    background: #55338d;
+    width: calc(100% + 14%);
+    margin-left: -7%;
+    margin-right: -7%;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+        .footer-content {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .footer-content h2 {
+            margin: 0 0 12px;
+            font-size: 34px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .footer-tagline {
+            margin: 0 0 20px;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .footer-contact-message {
+            margin: 0 0 25px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .footer-contact-row {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 18px;
+        }
+
+        .footer-social-icon,
+        .footer-contact-icon {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            min-height: 52px;
+            max-width: 52px;
+            max-height: 52px;
+            flex: 0 0 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fff;
+            color: #5b2d90;
+            text-decoration: none;
+        }
+
+        .footer-social-icon i,
+        .footer-contact-icon i {
+            font-size: 21px;
+            line-height: 1;
+        }
+
+        .footer-contact-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            flex: 0 0 auto;
+            min-width: 0;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .footer-contact-text {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .footer-social-icon:hover,
+        .footer-contact-item:hover .footer-contact-icon {
+            transform: translateY(-2px);
+            transition: transform .2s ease, box-shadow .2s ease;
+            box-shadow: 0 5px 14px rgba(0,0,0,.22);
+        }
+
+        .copyright {
+            margin: 25px 0 0;
+            font-size: 14px;
+            color: #fff;
+            opacity: .8;
+        }
+
+        @media (max-width: 1000px) {
+            .footer-contact-row {
+                gap: 12px;
+                padding: 0 12px;
+            }
+
+            .footer-social-icon,
+            .footer-contact-icon {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                min-height: 48px;
+                max-width: 48px;
+                max-height: 48px;
+                flex-basis: 48px;
+            }
+
+            .footer-social-icon i,
+            .footer-contact-icon i {
+                font-size: 19px;
+            }
+
+            .footer-contact-text {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-footer {
+                padding: 45px 15px;
+            }
+
+            .footer-content h2 {
+                font-size: 26px;
+            }
+
+            .footer-tagline {
+                font-size: 15px;
+            }
+
+            .footer-contact-message {
+                font-size: 13px;
+            }
+
+            .footer-contact-row {
+                max-width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                column-gap: 14px;
+                row-gap: 14px;
+                overflow: visible;
+                padding: 0 12px;
+            }
+
+            .footer-social-icon,
+            .footer-contact-icon {
+                width: 46px;
+                height: 46px;
+                min-width: 46px;
+                min-height: 46px;
+                max-width: 46px;
+                max-height: 46px;
+                flex-basis: 46px;
+            }
+
+            .footer-social-icon i,
+            .footer-contact-icon i {
+                font-size: 19px;
+            }
+
+            .footer-contact-item {
+                gap: 7px;
+            }
+
+            .footer-contact-text {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-footer {
+                padding: 40px 10px;
+            }
+
+            .footer-contact-row {
+                column-gap: 10px;
+                row-gap: 12px;
+                padding: 0 8px;
+            }
+
+            .footer-social-icon,
+            .footer-contact-icon {
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+                min-height: 42px;
+                max-width: 42px;
+                max-height: 42px;
+                flex-basis: 42px;
+            }
+
+            .footer-social-icon i,
+            .footer-contact-icon i {
+                font-size: 17px;
+            }
+
+            .footer-contact-text {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .footer-contact-row {
+                column-gap: 8px;
+                row-gap: 10px;
+            }
+
+            .footer-social-icon,
+            .footer-contact-icon {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
+                max-width: 40px;
+                max-height: 40px;
+                flex-basis: 40px;
+            }
+
+            .footer-social-icon i,
+            .footer-contact-icon i {
+                font-size: 16px;
+            }
+
+            .footer-contact-text {
+                font-size: 9px;
+            }
+        }
+	html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+.courses-page {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.courses-page > header,
+.courses-page > .site-footer {
+    width: calc(100% + 14%);
+    margin-left: -7%;
+    margin-right: -7%;
+    box-sizing: border-box;
+}
+
+.courses-page > header {
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+.courses-page > header nav {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 4% !important;
+}
+
+.courses-page > .site-footer {
+    padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+    .courses-page > header nav {
+        width: 100% !important;
+        padding: 0 3% !important;
+    }
+
+    .courses-page > .site-footer {
+        padding: 45px 0;
+    }
+}
+
+    </style>
+<style>
+
+/* ================= EXACT HEADER FROM header(5).html ================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth} body{background:#1b1236;color:#fff;overflow-x:hidden}
+header{width:100%;background:#5b2d90;position:sticky;top:0;z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,.15)}
+header nav{width:92%;min-height:105px;margin:auto;display:flex;align-items:center;justify-content:space-between;position:relative}
+.logo-box{display:flex;align-items:center;gap:10px}.logo-box img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}.academy-name{display:flex;flex-direction:column;justify-content:center}.academy-name h1{margin:0;font-size:28px;line-height:1.2;color:#fff;font-weight:700}.academy-name p{margin:2px 0 0;font-size:12px;color:#fff;line-height:1.4}
+.menu-toggle{width:55px;height:55px;border:none;border-radius:10px;background:#ff5da8;cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:0;flex-shrink:0;z-index:1100}
+.menu-toggle span{width:30px;height:3px;background:#fff;border-radius:5px;transition:.3s}
+.menu-toggle.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}.menu-toggle.open span:nth-child(2){opacity:0}.menu-toggle.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+#nav-menu{position:absolute;top:calc(100% + 8px);right:0;width:240px;display:none;flex-direction:column;list-style:none;gap:0;padding:10px;background:#5b2d90;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.30)}
+#nav-menu.active{display:flex}#nav-menu li{width:100%}#nav-menu li a{display:block;width:100%;padding:14px 18px;color:#fff;text-decoration:none;font-weight:500;border-radius:9px;transition:.25s}
+#nav-menu li a:hover,#nav-menu li a.active{background:#ff5da8;color:#fff}
+@media screen and (min-width:769px){
+.menu-toggle{display:none!important}
+header nav #nav-menu{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:5px!important;position:static!important;width:auto!important;max-width:none!important;margin:0!important;padding:0!important;list-style:none!important;background:transparent!important;border-radius:0!important;box-shadow:none!important}
+header nav #nav-menu li{display:block!important;width:auto!important;margin:0!important;padding:0!important}
+header nav #nav-menu li a{display:block!important;width:auto!important;padding:11px 15px!important;color:#fff!important;background:transparent!important;text-decoration:none!important;font-size:15px!important;font-weight:500!important;border-radius:8px!important;white-space:nowrap!important}
+header nav #nav-menu li a:hover,header nav #nav-menu li a.active{background:#ff5da8!important;color:#fff!important}}
+@media screen and (max-width:768px){
+header nav {
+    width: 100%;
+    min-height: 105px;
+    margin: 0;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}.logo-box img{width:55px;height:55px}.academy-name{min-width:0}.academy-name h1{font-size:19px;white-space:nowrap}.academy-name p{font-size:10px;white-space:nowrap}
+.menu-toggle{display:flex!important;width:48px;height:48px}.menu-toggle span{width:27px}#nav-menu{width:230px;max-width:75vw}#nav-menu.active{display:flex!important}#nav-menu li{display:block;width:100%}#nav-menu li a{display:block;width:100%;padding:13px 16px}}
+@media screen and (max-width:480px){
+header nav{min-height:90px;width:94%}.logo-box{gap:7px;max-width:calc(100% - 62px)}.logo-box img{width:52px;height:52px}.academy-name h1{font-size:17px}.academy-name p{font-size:9px}.menu-toggle{width:45px;height:45px}.menu-toggle span{width:25px}}
+@media screen and (max-width:360px){
+.academy-name h1{font-size:15px}.academy-name p{font-size:8px}.logo-box img{width:48px;height:48px}.menu-toggle{width:42px;height:42px}#nav-menu{width:210px}}
+
+/* Keep the header flush to the course page edges while preserving course spacing */
+/* HEADER: FULL WIDTH, NO OUTER SPACE */
+.courses-page > header {
+    width: calc(100% + 14%) !important;
+    margin: 0 -7% !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+.courses-page > header nav {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 4% !important;
+    box-sizing: border-box;
+}
+@media screen and (max-width:768px) {
+    .courses-page > header {
+        margin-top: -85px;
+        margin-left: -7%;
+        margin-right: -7%;
+        width: calc(100% + 14%);
+    }
+}
+@media screen and (max-width:480px) {
+    .courses-page > header { margin-top: -85px; }
+}
+
+
+/* FINAL FIX: header and footer full width like index.html */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+#courses.courses-page {
+    padding-left: 7% !important;
+    padding-right: 7% !important;
+    box-sizing: border-box !important;
+}
+
+/* Header background touches both screen edges; nav keeps its own inner spacing */
+#courses.courses-page > header {
+    display: block !important;
+    position: sticky !important;
+    top: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-top: 0 !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+#courses.courses-page > header nav {
+    width: 92% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Footer background touches both screen edges with no side padding */
+#courses.courses-page > footer.site-footer {
+    display: block !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+#courses.courses-page > footer.site-footer .footer-content {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 768px) {
+    #courses.courses-page > header {
+        margin-top: 0 !important;
+    }
+    #courses.courses-page > header nav {
+        width: 100% !important;
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+    }
+    #courses.courses-page > footer.site-footer {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* FINAL SCROLL + FOOTER FIX: use normal document scrolling */
+html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+body {
+    position: relative !important;
+}
+#courses.courses-page {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: clip !important;
+    display: block !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+#courses.courses-page > footer.site-footer {
+    margin-bottom: 0 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<section id="courses" class="courses-page active">
+
+<header>
+<nav>
+<div class="logo-box">
+<a href="index.html" aria-label="Go to Home">
+    <img src="logo_cropped.png" alt="Kalavartan Academy Logo">
+</a>
+<div class="academy-name">
+<h1>Kalavartan Academy</h1>
+<p>Music &amp; Dance Training for Every Passion</p>
+</div>
+</div>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open Menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+<ul id="nav-menu">
+<li><a href="index.html" >Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="course.html" class="active">Courses</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</header>
+
+
+  
+
+    <!-- ================= COURSES HEADER ================= -->
+
+    <div class="courses-header">
+
+        <p class="courses-label">
+            ✦ EXPLORE YOUR TALENT ✦
+        </p>
+
+        <h1>
+            Our <span>Courses</span>
+        </h1>
+
+        <div class="courses-title-line"></div>
+
+        <p class="courses-intro">
+            Discover your passion, develop your skills and
+            express yourself through music and performance.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         01 HARMONIUM — IMAGE LEFT
+         ===================================================== -->
+
+    <div class="course-row">
+
+        <div class="course-image">
+
+            <img
+                src="course/h5.jpeg"
+                alt="Harmonium Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                01
+            </span>
+
+            <h2>
+                🎹 Harmonium
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="harmoniumBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="harmoniumDescription">
+
+                <ul>
+
+                    <li>Fundamentals of harmonium</li>
+
+                    <li>Swaras, alankars & basic music theory</li>
+
+                    <li>Classical and devotional compositions</li>
+
+                    <li>Practical performance training</li>
+
+                    <li>Suitable for beginners and advanced learners</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="harmoniumClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         02 GUITAR — IMAGE RIGHT
+         ===================================================== -->
+
+    <div class="course-row reverse">
+
+        <div class="course-image">
+
+            <img
+                src="course/g3.jpeg"
+                alt="Guitar Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                02
+            </span>
+
+            <h2>
+                🎸 Guitar
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="guitarBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="guitarDescription">
+
+                <ul>
+
+                    <li>Beginner to advanced learning</li>
+
+                    <li>Basic theory & practical training</li>
+
+                    <li>Chords, scales, rhythm and songs</li>
+
+                    <li>Suitable for children and adults</li>
+
+                    <li>Individual attention</li>
+
+                    <li>Performative Practices</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="guitarClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         03 FLUTE — IMAGE LEFT
+         ===================================================== -->
+
+    <div class="course-row">
+
+        <div class="course-image">
+
+            <img
+                src="course/f4.jpeg"
+                alt="Flute Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                03
+            </span>
+
+            <h2>
+                🪈 Flute
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="fluteBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="fluteDescription">
+
+                <ul>
+
+                    <li>Introduction to bansuri</li>
+
+                    <li>Swara and breath-control exercises</li>
+
+                    <li>Alankars and basic Ragas</li>
+
+                    <li>Classical and devotional compositions</li>
+
+                    <li>Progressive practical training</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="fluteClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         04 TABLA — IMAGE RIGHT
+         ===================================================== -->
+
+    <div class="course-row reverse">
+
+        <div class="course-image">
+
+            <img
+                src="course/t7.jpeg"
+                alt="Tabla Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                04
+            </span>
+
+            <h2>
+                🥁 Tabla
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="tablaBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="tablaDescription">
+
+                <ul>
+
+                    <li>Basic bols and taal</li>
+
+                    <li>Hand positioning and technique</li>
+
+                    <li>Kaida, Palta, Tukda (exam oriented)</li>
+
+                    <li>Understanding rhythm and taal</li>
+
+                    <li>Classical practical training</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="tablaClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05 SINGING — IMAGE LEFT
+         ===================================================== -->
+
+    <div class="course-row">
+
+        <div class="course-image">
+
+            <img
+                src="course/mic6.jpeg"
+                alt="Singing Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                05
+            </span>
+
+            <h2>
+                🎤 Singing
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="singingBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="singingDescription">
+
+                <ul>
+
+                    <li>Basic vocal training</li>
+
+                    <li>Rhythm and musical sense</li>
+
+                    <li>Alankaras, Ragas & Devotional songs</li>
+
+                    <li>Expression and singing techniques</li>
+
+                    <li>Singing along Instruments</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="singingClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         06 KIDS DANCE — IMAGE RIGHT
+         ===================================================== -->
+
+    <div class="course-row reverse">
+
+        <div class="course-image">
+
+            <img
+                src="course/s8.jpeg"
+                alt="Kids Dance Course"
+            >
+
+        </div>
+
+
+        <div class="course-info">
+
+            <span class="course-number">
+                06
+            </span>
+
+            <h2>
+                💃🏻 Kids Dance
+            </h2>
+
+            <div class="course-line"></div>
+
+
+            <button class="learn-more-btn" id="danceBtn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="course-description" id="danceDescription">
+
+                <ul>
+
+                    <li>Theme-based choreography</li>
+
+                    <li>Rhythm and co-ordination</li>
+
+                    <li>Expressions and stage presence</li>
+
+                    <li>
+                        Bollywood, Devotional, Western and
+                        Semi-Classical
+                    </li>
+
+                    <li>Performance preparation</li>
+
+                </ul>
+
+                <button class="show-less-btn" id="danceClose">
+                    Show Less
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= END MESSAGE ================= -->
+
+    <div class="courses-end">
+
+        <h2>
+            Find Your <span>Rhythm</span>
+        </h2>
+
+        <p>
+            Choose your passion, learn with confidence
+            and let your talent shine.
+        </p>
+
+    </div>
+<footer class="site-footer">
+        <div class="footer-content">
+
+            <h2>Kalavartan Academy</h2>
+
+            <p class="footer-tagline">
+                Learn • Perform • Express • Grow
+            </p>
+
+            <p class="footer-contact-message">
+                Contact us — click the icons below to connect with us
+            </p>
+
+            <div class="footer-contact-row" aria-label="Contact and social links">
+
+                <!-- Facebook -->
+                <a href="#"
+                   class="footer-social-icon"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/kalavartan_academy"
+                   class="footer-social-icon"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@krupaliruparel"
+                   class="footer-social-icon"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919879668266"
+                   class="footer-contact-item"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Contact us on WhatsApp">
+                    <span class="footer-contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </span>
+                    <span class="footer-contact-text">
+                        +91 98796 68266
+                    </span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:kalavartanacademy@gmail.com"
+                   class="footer-contact-item"
+                   aria-label="Email Kalavartan Academy">
+                    <span class="footer-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="footer-contact-text">
+                        kalavartanacademy@gmail.com
+                    </span>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Kalavartan Academy. All Rights Reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+</section>
+
+<script>
+/* ================= EXACT HEADER SCRIPT FROM header(5).html ================= */
+const menuToggle=document.getElementById("menu-toggle");
+const navMenu=document.getElementById("nav-menu");
+menuToggle.addEventListener("click",function(){
+    navMenu.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+    const isOpen=navMenu.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded",isOpen);
+    menuToggle.setAttribute("aria-label",isOpen ? "Close Menu" : "Open Menu");
+});
+document.querySelectorAll("#nav-menu a").forEach(function(link){
+    link.addEventListener("click",function(){
+        navMenu.classList.remove("active");
+        menuToggle.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded","false");
+        menuToggle.setAttribute("aria-label","Open Menu");
+    });
+});
+</script>
+
+<script>
+/* =========================================================
+   COURSES
+   ========================================================= */
+
+
+
+
+/* =========================================================
+   COURSE LEARN MORE / SHOW LESS
+   ========================================================= */
+
+const courses = [
+
+    {
+        button: "harmoniumBtn",
+        description: "harmoniumDescription",
+        close: "harmoniumClose"
+    },
+
+    {
+        button: "guitarBtn",
+        description: "guitarDescription",
+        close: "guitarClose"
+    },
+
+    {
+        button: "fluteBtn",
+        description: "fluteDescription",
+        close: "fluteClose"
+    },
+
+    {
+        button: "tablaBtn",
+        description: "tablaDescription",
+        close: "tablaClose"
+    },
+
+    {
+        button: "singingBtn",
+        description: "singingDescription",
+        close: "singingClose"
+    },
+
+    {
+        button: "danceBtn",
+        description: "danceDescription",
+        close: "danceClose"
+    }
+
+];
+
+
+courses.forEach(function(course) {
+
+    const button =
+        document.getElementById(course.button);
+
+    const description =
+        document.getElementById(course.description);
+
+    const close =
+        document.getElementById(course.close);
+
+
+    if (!button || !description || !close) {
+        return;
+    }
+
+
+    /* =========================
+       LEARN MORE
+       ========================= */
+
+    button.addEventListener("click", function() {
+
+        description.classList.add("show");
+
+        button.style.display = "none";
+
+    });
+
+
+    /* =========================
+       SHOW LESS
+       ========================= */
+
+    close.addEventListener("click", function() {
+
+        description.classList.remove("show");
+
+        button.style.display = "inline-flex";
+
+    });
+
+});
+
+
+
+</script>
+
+</body>
+</html>
